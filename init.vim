@@ -11,6 +11,9 @@ set nowrap
 set autochdir
 set conceallevel=0 
 
+"Remove numbers on terminal"
+autocmd TermOpen * setlocal nonumber norelativenumber
+
 "Theme"
 set background=dark
 colorscheme gruvbox8
