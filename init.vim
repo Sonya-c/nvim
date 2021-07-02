@@ -2,21 +2,41 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'neoclide/coc-snippets'
     Plug 'honza/vim-snippets'
-    Plug 'lifepillar/vim-gruvbox8'
+    
+    "Other Theams Colors"
+    "Plug 'lifepillar/vim-gruvbox8'"
+    Plug 'dracula/vim'
 call plug#end()
 
-syntax enable
+"Sytanx Highlight"
+syntax on
+
+"Show the number and the relative number to the line"
 set number relativenumber          
+
+"Others"
 set nowrap
 set autochdir
 set conceallevel=0 
 
+" Speed up scrolling in Vim
+set ttyfast
+
 "Remove numbers on terminal"
 autocmd TermOpen * setlocal nonumber norelativenumber
 
+"Correct Colors"
+if has('termguicolors')
+    set termguicolors
+endif
+
 "Theme"
 set background=dark
-colorscheme gruvbox8
+"colorscheme gruvbox8"
+colorscheme dracula 
+
+"Airline"
+let g:airline_powerline_fonts = 1
 
 "Encoding"
 set fileencoding=utf-8 

@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='D:\codeForce'
+let g:netrw_dirhist_0='D:/cpp/BinarySearchTrees'
+let g:netrw_dirhist_9='D:\cpp\BinarySearchTrees'
+let g:netrw_dirhist_8='D:/cpp'
+let g:netrw_dirhist_7='D:\cpp'
+let g:netrw_dirhist_6='D:\cpp\BinarySearchTrees'
+let g:netrw_dirhist_5='D:\temp\binarytSearchTrees'
+let g:netrw_dirhist_4='D:\temp/binarytSearchTrees'
+let g:netrw_dirhist_3='D:\temp'
 let g:netrw_dirhist_2='D:\sonya-c\dev'
-let g:netrw_dirhist_1='C:\Users\sonya\AppData\Local\nvim'
