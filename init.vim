@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'neoclide/coc-snippets'
     Plug 'honza/vim-snippets'
-    
+    Plug 'vim-airline/vim-airline'
     "Other Theams Colors"
     "Plug 'lifepillar/vim-gruvbox8'"
     Plug 'dracula/vim'
@@ -13,6 +13,11 @@ syntax on
 
 "Show the number and the relative number to the line"
 set number relativenumber          
+
+"Correct Colors"
+if has('termguicolors')
+    set termguicolors
+endif
 
 "Others"
 set nowrap
@@ -25,18 +30,10 @@ set ttyfast
 "Remove numbers on terminal"
 autocmd TermOpen * setlocal nonumber norelativenumber
 
-"Correct Colors"
-if has('termguicolors')
-    set termguicolors
-endif
-
 "Theme"
-set background=dark
 "colorscheme gruvbox8"
+set background=dark
 colorscheme dracula 
-
-"Airline"
-let g:airline_powerline_fonts = 1
 
 "Encoding"
 set fileencoding=utf-8 
@@ -48,9 +45,6 @@ set clipboard+=unnamedplus
 "Splits"
 set splitbelow
 set splitright
-
-"Status bar color transparent"
-hi StatusLine ctermbg=NONE cterm=NONE
 
 set nobackup
 set nowritebackup 
@@ -70,3 +64,9 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+"Airline"
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+let g:airline_detect_spelllang=1
+set t_Co=256
+
