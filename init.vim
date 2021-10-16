@@ -18,7 +18,7 @@ syntax on
 set number relativenumber          
 
 "Others"
-set nowrap
+set wrap linebreak
 set autochdir
 set conceallevel=0 
 

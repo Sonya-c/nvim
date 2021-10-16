@@ -7,3 +7,5 @@ imap <S-Insert> <C-R>*
 
 cd $USERPROFILE
 
+ hi airline_c  ctermbg=NONE guibg=NONE
+ hi airline_tabfill ctermbg=NONE guibg=NONE
