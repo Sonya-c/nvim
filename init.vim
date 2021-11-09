@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Other Theams Colors"
     "Plug 'lifepillar/vim-gruvbox8'"
     "Plug 'dracula/vim'
+    Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'vim-airline/vim-airline'
     Plug 'jacoborus/tender.vim'
     Plug 'rakr/vim-one'
@@ -20,7 +21,7 @@ set number relativenumber
 "Others"
 set wrap linebreak
 set autochdir
-set conceallevel=0 
+"set conceallevel=0 
 
 " Speed up scrolling in Vim
 set ttyfast
@@ -49,8 +50,8 @@ endif
 set background=dark 
 "colorscheme gruvbox8"
 "colorscheme dracula
-colorscheme tender
-let g:airline_theme = 'tender'
+colorscheme dracula
+let g:airline_theme = 'dracula'
 
 "Encoding"
 set fileencoding=utf-8 
