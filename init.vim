@@ -3,13 +3,15 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc-snippets'
     Plug 'honza/vim-snippets'
 
+    "Plug 'ful1e5/onedark.nvim'
+    
     "Other Theams Colors"
-    "Plug 'lifepillar/vim-gruvbox8'"
-    "Plug 'dracula/vim'
-    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'lifepillar/vim-gruvbox8'
+    "Plug 'dracula/vim', { 'as': 'dracula' }""
+    
     Plug 'vim-airline/vim-airline'
-    Plug 'jacoborus/tender.vim'
-    Plug 'rakr/vim-one'
+    "Plug 'jacoborus/tender.vim'
+    "Plug 'rakr/vim-one'
 call plug#end()
 
 "Sytanx Highlight"
@@ -47,11 +49,12 @@ if (empty($TMUX))
 endif
 
 "Theme"
-set background=dark 
-"colorscheme gruvbox8"
+"set background=dark 
+
+"colorscheme onedark
+colorscheme gruvbox8
 "colorscheme dracula
-colorscheme dracula
-let g:airline_theme = 'dracula'
+"let g:airline_theme = 'dracula'
 
 "Encoding"
 set fileencoding=utf-8 
@@ -82,4 +85,3 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-
