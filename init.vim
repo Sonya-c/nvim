@@ -1,71 +1,77 @@
 call plug#begin('~/.local/share/nvim/plugged')
-    "spinnets"
-"    Plug 'SirVer/ultisnips'
-    Plug 'ervandew/supertab'
+    Plug 'sheerun/vim-polyglot' 
+    Plug 'itchyny/lightline.vim'
+    Plug 'preservim/nerdtree'
 
-    "themes"
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'alvan/vim-closetag'
+
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'mhinz/vim-signify'
+    Plug 'Yggdroot/indentLine'
+    Plug 'preservim/nerdcommenter'
+    Plug 'tpope/vim-fugitive'
+    " easymotion/vim-easymotion
+    " themes
     Plug 'dracula/vim', { 'as': 'dracula' }
-    Plug 'vim-airline/vim-airline'
+     
 call plug#end()
 
-"Sytanx Highlight"
+filetype plugin on
+
 syntax on
 
-"Show the number and the relative number to the line"
-set number relativenumber          
+set number
+set relativenumber
+set numberwidth=1
+set mouse=a
+set cursorline 
+set showcmd 
+set ruler 
+set sw=2
+set showmatch 
 
-"Others"
 set wrap linebreak
 set autochdir
 
-" Speed up scrolling in Vim
-set ttyfast
-
-"Remove numbers on terminal"
-autocmd TermOpen * setlocal nonumber norelativenumber
-
-"Theme"
-colorscheme dracula
-
-let g:airline_theme = 'dracula'
-hi Normal guibg=NONE ctermbg=NONE
-
-"Encoding"
 set fileencoding=utf-8 
 set encoding=utf-8
 
-"Copy to clipboard"
+" Remove numbers on terminal
+autocmd TermOpen * setlocal nonumber noreativenumber
+
 set clipboard+=unnamedplus
 
-"Splits"
 set splitbelow
 set splitright
-
 set nobackup
 set nowritebackup 
 
-"Tabsize = 4"
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
 set expandtab
 set autoindent
 set smartindent
 set smarttab
 
-"Navigation"
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
+" Theme
+colorscheme dracula
+let g:lightline = {
+  \ 'colorscheme': 'dracula'
+\}
+hi Normal guibg=NONE ctermbg=NONE
 
-"auto completition"
-let g:SuperTabDefaultCompletitionType = '<C-n>'
-let g:SuperTabCrMapping = 0
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigget = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:ycm_key_list_select_completion = ['<C-j>', '<C-n>', '<Up>']
-let g:UtiliSnipseEditSplit = "vertical"
-let g:UltiSnipsListSnippets = "<c-t>"
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+let NERDTreeMinimalUI=1
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
