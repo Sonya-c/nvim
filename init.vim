@@ -64,6 +64,12 @@ let g:lightline = {
 \}
 hi Normal guibg=NONE ctermbg=NONE
 
+set hlsearch 
+set incsearch 
+set ignorecase 
+set smartcase
+
+
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 let NERDTreeMinimalUI=1
