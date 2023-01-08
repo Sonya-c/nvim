@@ -41,7 +41,8 @@ set fileencoding=utf-8
 set encoding=utf-8
 
 " Remove numbers on terminal
-autocmd TermOpen * setlocal nonumber noreativenumber
+autocmd TermOpen * setlocal nonumber norelativenumber
+autocmd TermOpen * startinsert
 
 set clipboard+=unnamedplus
 
