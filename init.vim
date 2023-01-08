@@ -7,7 +7,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'alvan/vim-closetag'
 
     Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Plug 'honza/vim-snippets'
+    
     Plug 'mhinz/vim-signify'
     Plug 'Yggdroot/indentLine'
     Plug 'preservim/nerdcommenter'
