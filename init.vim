@@ -81,3 +81,4 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx"
