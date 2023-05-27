@@ -40,6 +40,14 @@ set encoding=utf-8
 autocmd TermOpen * setlocal nonumber norelativenumber
 autocmd TermOpen * startinsert
 
+" Open powershell insed of cmd 
+set shell=powershell.exe
+set shellxquote=
+let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
+let &shellquote   = ''
+let &shellpipe    = '| Out-File -Encoding UTF16LE %s'
+let &shellredir   = '| Out-File -Encoding UTF16LE %s'
+
 set clipboard+=unnamedplus
 
 set splitbelow
